@@ -496,8 +496,7 @@ Responsible Technology Learning</p>
 SECURITY ACCESS PANEL
 </h2>
 
-<p>
-Training Environment Status:
+<p>Training Environment Status:
 <span class="online">
 READY
 </span>
@@ -513,6 +512,19 @@ All systems are running in simulation mode.
 
 </div>
 
+<div class="box">
+
+<h2>Cyber Scanner</h2>
+
+<button onclick="scan()">
+START SCAN
+</button>
+
+<p id="result">
+System ready...
+</p>
+
+</div>
 
 
 <script>
@@ -704,7 +716,44 @@ number++;
 
 },4000);
 
+function securityScan(){
 
+let box=document.getElementById("labOutput");
+
+box.innerHTML=
+"Starting security scan...<br>"+
+"Checking protection modules...<br>"+
+"Analysing system status...<br>"+
+"Scan complete. Environment secure.";
+
+}
+
+
+
+function networkCheck(){
+
+let box=document.getElementById("labOutput");
+
+box.innerHTML=
+"Network monitor active.<br>"+
+"Connection: Protected<br>"+
+"Firewall: Enabled";
+
+}
+
+
+
+function systemReport(){
+
+let box=document.getElementById("labOutput");
+
+box.innerHTML=
+"System Report<br>"+
+"Core status: Online<br>"+
+"Security layer: Active<br>"+
+"Simulation mode: Enabled";
+
+}
 
 </script>
 
