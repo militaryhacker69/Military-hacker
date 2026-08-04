@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Military Hacker 69 Register</title>
+
+</head>
+
+<body>
+
+<h1>Create Account</h1>
+
+<input id="username" placeholder="Username">
+
+<br><br>
+
+<input id="password" type="password" placeholder="Password">
+
+<br><br>
+
+<button onclick="register()">
+REGISTER
+</button>
+
+<p id="message"></p>
+
+
+<script>
+
+function register(){
+
+let user = document.getElementById("username").value;
+let pass = document.getElementById("password").value;
+
+
+localStorage.setItem("username", user);
+localStorage.setItem("password", pass);
+
+
+document.getElementById("message").innerHTML =
+"Account created";
+
+}
+
+</script>
+
+</body>
+</html>
