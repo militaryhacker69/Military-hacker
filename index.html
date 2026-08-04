@@ -774,42 +774,27 @@ document.getElementById("message").innerHTML =
 
 function login(){
 
-let user =
-document.getElementById("username").value;
+let user = document.getElementById("username").value;
+let pass = document.getElementById("password").value;
 
-let pass =
-document.getElementById("password").value;
+let savedUser = localStorage.getItem("username");
+let savedPass = localStorage.getItem("password");
 
+if(user === savedUser && pass === savedPass){
 
-let saveUser =
-localStorage.getItem("user");
-
-let savePass =
-localStorage.getItem("pass");
-
-
-if(user == saveUser && pass == savePass){
-
-
-document.getElementById("message").innerHTML =
-"LOGIN BERJAYA. Welcome " + user;
+localStorage.setItem("loggedIn","true");
 
 window.location = "dashboard.html";
 
+}else{
+
+alert("Username atau password salah");
 
 }
-
-else{
-
-
-document.getElementById("message").innerHTML =
-"LOGIN GAGAL";
-
 
 }
 
 
-}
 
 
 
