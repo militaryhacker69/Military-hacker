@@ -1,95 +1,243 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>White Hat Cyber Security</title>
+
+<title>White Hat Cyber Security Lab</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
 *{
 box-sizing:border-box;
 }
 
 body{
 margin:0;
-background:#050505;
+background:#000;
 color:white;
-font-family:Arial,sans-serif;
+font-family:Courier New,monospace;
+overflow-x:hidden;
 }
 
+
+/* LOADING */
+
 #loading{
+
 position:fixed;
+top:0;
+left:0;
 width:100%;
 height:100%;
-background:black;
+background:#000;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 z-index:9999;
 color:#00ffff;
 font-size:25px;
+text-shadow:0 0 15px cyan;
+
 }
 
-.hero{
+
+/* BACKGROUND */
+
+.main{
+
 min-height:100vh;
+
 background:
-linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.9)),
+linear-gradient(
+rgba(0,0,0,.75),
+rgba(0,0,0,.95)
+),
 url("hacker.JPG");
+
 background-size:cover;
 background-position:center;
-text-align:center;
-padding:50px 20px;
+
+padding:30px;
+
 }
 
-h1{
-color:#00ffff;
-text-shadow:0 0 15px cyan;
+
+/* HEADER */
+
+.header{
+
+text-align:center;
+padding:30px;
+
 }
+
+
+.header h1{
+
+color:#00ffff;
+font-size:40px;
+text-shadow:
+0 0 10px cyan,
+0 0 30px cyan;
+
+}
+
+
+.header p{
+
+color:#00ff88;
+font-size:18px;
+
+}
+
+
+
+/* BOX SYSTEM */
+
 
 .box{
-background:rgba(0,20,20,.8);
-border:1px solid cyan;
-padding:20px;
-margin:20px auto;
-max-width:900px;
+
+background:
+rgba(0,0,0,.75);
+
+border:
+
+1px solid cyan;
+
 border-radius:10px;
-box-shadow:0 0 15px cyan;
+
+padding:20px;
+
+margin:20px auto;
+
+max-width:1000px;
+
+box-shadow:
+0 0 15px cyan;
+
+
 }
+
+
+
+/* GLITCH */
+
+
+.glitch{
+
+animation:glitch 1s infinite;
+
+}
+
+
+@keyframes glitch{
+
+0%{
+transform:none;
+}
+
+20%{
+transform:skew(2deg);
+}
+
+40%{
+transform:none;
+}
+
+60%{
+transform:skew(-2deg);
+}
+
+100%{
+transform:none;
+}
+
+}
+
+
+
+/* BUTTON */
+
 
 button{
+
 background:#00ffff;
+color:black;
 border:0;
 padding:12px 25px;
+font-weight:bold;
 cursor:pointer;
+
 }
 
-input{
-background:black;
-color:#00ff00;
-border:1px solid cyan;
-padding:12px;
-width:70%;
+
+
+button:hover{
+
+box-shadow:0 0 20px cyan;
+
 }
+
+
+
+/* TERMINAL */
+
 
 .terminal{
+
 background:black;
-color:#00ff00;
+
+border:1px solid #00ff00;
+
 padding:20px;
-font-family:monospace;
-text-align:left;
-min-height:150px;
-}
 
-.status{
-color:#00ff88;
-font-size:20px;
-}
+min-height:180px;
 
-.log{
 color:#00ff00;
-font-family:monospace;
-text-align:left;
+
+font-size:16px;
+
+overflow:hidden;
+
 }
+
+
+/* INPUT */
+
+
+input{
+
+width:80%;
+
+background:black;
+
+color:#00ff00;
+
+border:1px solid cyan;
+
+padding:12px;
+
+font-family:Courier New;
+
+}
+
+
+
+/* STATUS */
+
+
+.online{
+
+color:#00ff00;
+
+font-size:20px;
+
+}
+
 
 </style>
+
 </head>
 
 
@@ -97,220 +245,470 @@ text-align:left;
 
 
 <div id="loading">
-INITIALIZING CYBER SECURITY SYSTEM...
-</div>
 
-
-<section class="hero">
-
-<h1>WHITE HAT CYBER SECURITY</h1>
-
-<p>
-Cybersecurity Research & Learning Environment
-</p>
-
-
-<div class="box">
-
-<h2>About</h2>
-
-<p>
-A simulated security environment for learning,
-protection and ethical cyber awareness.
-</p>
+INITIALIZING WHITE HAT SECURITY SYSTEM...
 
 </div>
 
 
+<div class="main">
+
+
+<div class="header">
+
+
+<h1 class="glitch">
+
+WHITE HAT CYBER SECURITY
+
+</h1>
+
+
+<p>
+
+Advanced Ethical Security Research Environment
+
+</p>
+
+
+</div>
+
+
+
 <div class="box">
 
-<h2>Security Console</h2>
+
+<h2>
+
+SECURITY COMMAND CENTER
+
+</h2>
+
+
+<p class="online">
+
+● SYSTEM ONLINE
+
+</p>
+
+
+<p>
+
+Firewall Protection: ACTIVE
+
+</p>
+
+
+<p>
+
+Monitoring Layer: ENABLED
+
+</p>
+
+
+<p>
+
+Cyber Intelligence Module: READY
+
+</p>
+
+
+</div>
+
+
+<div class="box">
+
+<h2>
+LIVE SECURITY TERMINAL
+</h2>
+
 
 <div class="terminal" id="terminal">
-security@lab:~$ system ready
+
+security@whitehat:~$ system boot completed<br>
+security@whitehat:~$ protection layer active<br>
+security@whitehat:~$ waiting for command...
+
 </div>
+
 
 <br>
 
-<input id="cmd" placeholder="type command">
 
-<button onclick="runCommand()">ENTER</button>
+<input 
+id="command"
+placeholder="Type command (help/status/scan)"
+>
+
+
+<button onclick="runCommand()">
+EXECUTE
+</button>
+
 
 </div>
 
 
-</section>
-
-
-
-<section>
 
 
 <div class="box">
 
-<h1>SECURITY OPERATIONS CENTER</h1>
 
-
-<h2 class="status">
-● SYSTEM ONLINE
+<h2>
+SECURITY MONITORING DASHBOARD
 </h2>
 
 
 <p>
-Monitoring: ACTIVE
+Network Status:
+<span class="online">
+SECURE
+</span>
 </p>
 
-<p>
-Firewall: ENABLED
-</p>
 
 <p>
-Protection Layer: RUNNING
+Threat Detection:
+<span class="online">
+ACTIVE
+</span>
+</p>
+
+
+<p>
+Encryption Layer:
+<span class="online">
+ENABLED
+</span>
+</p>
+
+
+<p>
+System Integrity:
+<span class="online">
+100%
+</span>
 </p>
 
 
 </div>
+
+
 
 
 
 <div class="box">
 
-<h2>Security Logs</h2>
 
-<div class="log" id="log">
+<h2>
+LIVE SYSTEM LOGS
+</h2>
 
-[12:01] System started<br>
-[12:02] Monitoring enabled<br>
-[12:03] Security module loaded
+
+<div class="terminal" id="logs">
+
+[12:00] Security service started<br>
+[12:01] Firewall initialized<br>
+[12:02] Monitoring module loaded<br>
 
 </div>
 
+
 </div>
+
 
 
 
 
 <div class="box">
 
-<h2>Research Profile</h2>
+
+<h2>
+WHITE HAT PROFILE
+</h2>
+
 
 <p>
-White Hat Security Researcher
+Role:
+Security Research & Defence Analyst
 </p>
+
+
+<p>
+Specialization:
+</p>
+
 
 <ul>
-<li>Web Security</li>
-<li>Linux Learning</li>
-<li>Network Protection</li>
-<li>Security Awareness</li>
+
+<li>
+Web Security Awareness
+</li>
+
+<li>
+Network Protection
+</li>
+
+<li>
+Linux Environment
+</li>
+
+<li>
+Ethical Security Research
+</li>
+
 </ul>
 
+
 </div>
+
 
 
 
 
 <div class="box">
 
-<h2>Knowledge Base</h2>
+
+<h2>
+CYBER KNOWLEDGE DATABASE
+</h2>
+
 
 <p>
-Cybersecurity Fundamentals
-</p>
+Security Fundamentals</p>
 
 <p>
-Ethical Security Practice
-</p>
+System Protection Concepts</p>
 
 <p>
-System Protection Concepts
-</p>
+Digital Safety Research</p>
+
+<p>
+Responsible Technology Learning</p>
 
 
 </div>
 
 
-</section>
+<div class="box">
+
+<h2>
+SECURITY ACCESS PANEL
+</h2>
+
+<p>
+Training Environment Status:
+<span class="online">
+READY
+</span>
+</p>
+
+<p>
+All systems are running in simulation mode.
+</p>
+
+</div>
+
+
+
+</div>
 
 
 
 <script>
 
 
+// REMOVE LOADING SCREEN
+
 setTimeout(function(){
 
 document.getElementById("loading").style.display="none";
 
-},2500);
+},3000);
 
+
+
+
+// TERMINAL SIMULATION
 
 
 function runCommand(){
 
-let cmd=document.getElementById("cmd").value;
+
+let input=document.getElementById("command");
 
 let terminal=document.getElementById("terminal");
 
 
-terminal.innerHTML += "<br>$ "+cmd;
+let command=input.value.toLowerCase();
 
 
-if(cmd=="help"){
+terminal.innerHTML += 
+"<br><br>security@whitehat:~$ " + command;
 
-terminal.innerHTML += "<br>Commands: help, status, about";
+
+
+if(command=="help"){
+
+
+terminal.innerHTML +=
+"<br>Available commands:";
+terminal.innerHTML +=
+"<br>- status";
+terminal.innerHTML +=
+"<br>- scan";
+terminal.innerHTML +=
+"<br>- network";
+terminal.innerHTML +=
+"<br>- about";
+
 
 }
 
-else if(cmd=="status"){
 
-terminal.innerHTML += "<br>All systems operational.";
+
+else if(command=="status"){
+
+
+terminal.innerHTML +=
+"<br>System Status: ONLINE";
+
+terminal.innerHTML +=
+"<br>Firewall: ACTIVE";
+
+terminal.innerHTML +=
+"<br>Protection: ENABLED";
+
 
 }
 
-else if(cmd=="about"){
 
-terminal.innerHTML += "<br>White Hat Cyber Security Training Lab.";
+
+else if(command=="scan"){
+
+
+terminal.innerHTML +=
+"<br>Starting security analysis...";
+
+setTimeout(function(){
+
+terminal.innerHTML +=
+"<br>Checking modules...";
+
+},500);
+
+
+setTimeout(function(){
+
+terminal.innerHTML +=
+"<br>Checking protection layer...";
+
+},1000);
+
+
+setTimeout(function(){
+
+terminal.innerHTML +=
+"<br>Analysis completed. Simulation secure.";
+
+},1500);
+
 
 }
+
+
+
+
+else if(command=="network"){
+
+
+terminal.innerHTML +=
+"<br>Network monitoring active.";
+
+terminal.innerHTML +=
+"<br>Connection: Protected.";
+
+}
+
+
+
+else if(command=="about"){
+
+
+terminal.innerHTML +=
+"<br>White Hat Cyber Security Learning Lab.";
+
+}
+
+
 
 else{
 
-terminal.innerHTML += "<br>Command stored in simulation.";
+
+terminal.innerHTML +=
+"<br>Command not recognized. Type help.";
 
 }
 
+
+
+input.value="";
+
+
 }
 
 
 
 
-let logs=[
+
+// LIVE LOG SYSTEM
+
+
+let messages=[
+
 "Security scan completed",
-"Monitoring active",
-"System protection enabled"
+
+"Firewall monitoring active",
+
+"Protection module verified",
+
+"System integrity checked",
+
+"Cyber environment stable"
+
 ];
 
 
-let i=0;
+let number=0;
+
 
 
 setInterval(function(){
 
-let box=document.getElementById("log");
 
-if(i<logs.length){
+let logs=document.getElementById("logs");
 
-box.innerHTML += "<br>[LIVE] "+logs[i];
 
-i++;
+if(number < messages.length){
+
+
+logs.innerHTML +=
+"<br>[LIVE] "+messages[number];
+
+
+number++;
+
 
 }
 
+
 },4000);
+
 
 
 </script>
 
 
 </body>
+
 </html>
