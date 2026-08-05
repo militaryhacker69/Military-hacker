@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>LAB 1 Linux Simulator</title>
+
+<style>
+
+body{
+background:#000;
+color:#00ff00;
+font-family:monospace;
+margin:0;
+}
+
+.box{
+
+padding:20px;
+
+}
+
+h1{
+
+text-align:center;
+text-shadow:0 0 15px #00ff00;
+
+}
+
+#terminal{
+
+background:#050505;
+border:1px solid #00ff00;
+padding:20px;
+height:400px;
+overflow:auto;
+
+}
+
+input{
+
+width:100%;
+background:#000;
+color:#00ff00;
+border:0;
+font-family:monospace;
+font-size:18px;
+outline:none;
+
+}
+
+.card{
+
+margin-top:20px;
+border:1px solid #00ff00;
+padding:15px;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="box">
+
+
+<h1>🐧 LAB 1: LINUX TERMINAL SIMULATOR</h1>
+
+
+<div class="card">
+
+<h3>MISSION 1</h3>
+
+<p>
+Cari lokasi semasa menggunakan arahan Linux.
+</p>
+
+<p>
+XP: 100
+</p>
+
+</div>
+
+
+
+<div id="terminal">
+
+<p>
+trainee@cyberlab:~$ Selamat datang ke Linux Simulator
+</p>
+
+</div>
+
+
+
+<input id="cmd"
+placeholder="Taip arahan..."
+onkeydown="run(event)">
+
+
+
+</div>
+
+
+
+
+<script>
+
+
+let xp=0;
+
+
+function run(e){
+
+
+if(e.key==="Enter"){
+
+
+let input=document.getElementById("cmd");
+
+let command=input.value;
+
+
+let terminal=document.getElementById("terminal");
+
+
+
+terminal.innerHTML +=
+"<p>trainee@cyberlab:~$ "+command+"</p>";
+
+
+
+if(command=="pwd"){
+
+terminal.innerHTML +=
+"<p>/home/trainee</p>";
+
+xp+=100;
+
+}
+
+
+
+else if(command=="ls"){
+
+terminal.innerHTML +=
+"<p>documents  training  notes</p>";
+
+xp+=100;
+
+}
+
+
+
+else if(command=="help"){
+
+terminal.innerHTML +=
+"<p>Commands: pwd, ls, help, clear</p>";
+
+}
+
+
+
+else if(command=="clear"){
+
+terminal.innerHTML="";
+
+}
+
+
+
+else{
+
+terminal.innerHTML +=
+"<p>Command tidak dikenali</p>";
+
+}
+
+
+
+terminal.innerHTML +=
+"<p>XP: "+xp+"</p>";
+
+
+
+input.value="";
+
+
+terminal.scrollTop=
+terminal.scrollHeight;
+
+
+}
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
