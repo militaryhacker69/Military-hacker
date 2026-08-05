@@ -3,57 +3,183 @@
 
 <head>
 
-<title>Learning Platform</title>
+<title>Cyber Learning Academy</title>
 
 <style>
 
-body{
-    margin:0;
-    font-family:Arial;
-    background:#000;
-    color:white;
+*{
+box-sizing:border-box;
 }
+
+body{
+
+margin:0;
+font-family:monospace;
+background:#020202;
+color:white;
+overflow-x:hidden;
+
+}
+
+
+/* background code animation */
+
+body:before{
+
+content:
+"010101 CYBER SECURITY 101010 WHITE HAT ACADEMY NETWORK DEFENSE SYSTEM ONLINE";
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+font-size:35px;
+line-height:80px;
+
+color:#00ff00;
+opacity:0.08;
+
+animation:code 12s linear infinite;
+
+z-index:-1;
+
+}
+
+
+@keyframes code{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(-600px);
+}
+
+}
+
+
 
 .header{
-    text-align:center;
-    padding:30px;
-    border-bottom:1px solid #00ff00;
+
+text-align:center;
+padding:40px;
+
+border-bottom:1px solid #00ff00;
+
 }
 
+
 .header h1{
-    color:#00ff00;
+
+color:#00ff00;
+font-size:35px;
+
+text-shadow:0 0 20px #00ff00;
+
 }
+
+
+
+.status{
+
+margin:20px auto;
+padding:15px;
+
+width:80%;
+
+background:#111;
+
+border:1px solid #00ff00;
+
+border-radius:15px;
+
+}
+
 
 
 .container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
-    padding:30px;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:20px;
+
+padding:30px;
+
 }
+
 
 
 .card{
-    background:#111;
-    border:1px solid #00ff00;
-    border-radius:15px;
-    padding:20px;
+
+background:rgba(0,20,0,0.8);
+
+border:1px solid #00ff00;
+
+padding:25px;
+
+border-radius:15px;
+
+transition:.3s;
+
 }
 
 
-.card h2{
-    color:#00ff00;
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 25px #00ff00;
+
 }
+
+
+
+h2{
+
+color:#00ff00;
+
+}
+
 
 
 button{
 
 width:100%;
+
 padding:12px;
+
 background:#00ff00;
-border:none;
+
+border:0;
+
 border-radius:8px;
+
+font-weight:bold;
+
 cursor:pointer;
+
+}
+
+
+
+button:hover{
+
+background:white;
+
+}
+
+
+.lock{
+
+color:red;
 
 }
 
@@ -68,11 +194,26 @@ cursor:pointer;
 
 <div class="header">
 
-<h1>📚 Learning Platform</h1>
+<h1>📚 WHITE HAT CYBER LEARNING ACADEMY</h1>
 
-<p>White Hat Cyber Security Learning Path</p>
+<p>
+Learn • Understand • Defend
+</p>
 
 </div>
+
+
+
+<div class="status">
+
+<h3>TRAINEE STATUS</h3>
+
+<p>LEVEL: Beginner</p>
+
+<p>Progress: ███░░░░░ 30%</p>
+
+</div>
+
 
 
 
@@ -90,11 +231,12 @@ cursor:pointer;
 Asas komputer, hardware, software dan sistem operasi.
 </p>
 
-<button onclick="window.location='computer.html'">
-START LESSON
+<button onclick="location='level1.html'">
+START LEVEL 1
 </button>
 
 </div>
+
 
 
 
@@ -105,14 +247,15 @@ START LESSON
 <h3>Linux Academy</h3>
 
 <p>
-Belajar Linux, terminal dan sistem operasi.
+Pengenalan Linux dan sistem operasi.
 </p>
 
-<button>
-START LESSON
+<button onclick="location='level2.html'">
+START LEVEL 2
 </button>
 
 </div>
+
 
 
 
@@ -123,14 +266,15 @@ START LESSON
 <h3>Networking</h3>
 
 <p>
-IP, DNS, HTTP, rangkaian dan komunikasi data.
+Internet, IP, DNS dan komunikasi data.
 </p>
 
-<button>
-START LESSON
+<button onclick="location='level3.html'">
+START LEVEL 3
 </button>
 
 </div>
+
 
 
 
@@ -141,14 +285,17 @@ START LESSON
 <h3>Web Technology</h3>
 
 <p>
-HTML, CSS, JavaScript dan teknologi web.
+HTML, CSS dan JavaScript.
 </p>
 
-<button>
-START LESSON
+
+<button onclick="location='level4.html'">
+START LEVEL 4
 </button>
 
+
 </div>
+
 
 
 
@@ -159,14 +306,15 @@ START LESSON
 <h3>Programming</h3>
 
 <p>
-Logik coding dan pembangunan aplikasi.
+Asas coding dan pembangunan.
 </p>
 
-<button>
-START LESSON
+<button onclick="location='level5.html'">
+START LEVEL 5
 </button>
 
 </div>
+
 
 
 
@@ -177,11 +325,11 @@ START LESSON
 <h3>Cyber Defense</h3>
 
 <p>
-Melindungi sistem dan memahami keselamatan siber.
+Melindungi sistem dan data.
 </p>
 
-<button>
-START LESSON
+<button onclick="location='level6.html'">
+START LEVEL 6
 </button>
 
 </div>
@@ -189,6 +337,7 @@ START LESSON
 
 
 </div>
+
 
 
 </body>

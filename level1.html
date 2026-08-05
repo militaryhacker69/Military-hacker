@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Level 1 Computer Fundamentals</title>
+
+<style>
+
+body{
+margin:0;
+font-family:monospace;
+background:#000;
+color:white;
+}
+
+body:before{
+content:"010101 COMPUTER SYSTEM ONLINE 010101 CYBER ACADEMY";
+position:fixed;
+font-size:40px;
+color:#00ff00;
+opacity:0.08;
+animation:move 10s linear infinite;
+z-index:-1;
+}
+
+@keyframes move{
+from{transform:translateY(0);}
+to{transform:translateY(-500px);}
+}
+
+.container{
+padding:25px;
+}
+
+.box{
+background:#111;
+border:1px solid #00ff00;
+border-radius:15px;
+padding:20px;
+margin-bottom:20px;
+}
+
+h1,h2{
+color:#00ff00;
+}
+
+button{
+background:#00ff00;
+padding:12px;
+border:0;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<div class="box">
+
+<h1>💻 LEVEL 1: COMPUTER FUNDAMENTALS</h1>
+
+<p>
+Selamat datang trainee. Ini adalah asas sebelum masuk dunia cybersecurity.
+</p>
+
+</div>
+
+
+
+<div class="box">
+
+<h2>📘 Lesson 1: Apa itu komputer?</h2>
+
+<p>
+Komputer ialah mesin elektronik yang menerima data,
+memproses maklumat dan menghasilkan output.
+</p>
+
+<p>
+Contoh:
+</p>
+
+<ul>
+<li>Keyboard = Input</li>
+<li>CPU = Pemproses</li>
+<li>Monitor = Output</li>
+</ul>
+
+</div>
+
+
+
+
+<div class="box">
+
+<h2>🧩 Lesson 2: Hardware</h2>
+
+<p>
+Hardware ialah komponen fizikal komputer.
+</p>
+
+<ul>
+<li>CPU - otak komputer</li>
+<li>RAM - memori sementara</li>
+<li>Storage - tempat simpan data</li>
+<li>Motherboard - papan utama</li>
+</ul>
+
+</div>
+
+
+
+
+<div class="box">
+
+<h2>⚙️ Lesson 3: Software</h2>
+
+<p>
+Software ialah program yang mengarahkan komputer melakukan tugas.
+</p>
+
+<ul>
+<li>Operating System</li>
+<li>Aplikasi</li>
+<li>Driver</li>
+</ul>
+
+</div>
+
+
+
+
+<div class="box">
+
+<h2>🖥️ Lesson 4: Operating System</h2>
+
+<p>
+OS menguruskan hardware dan software.
+</p>
+
+<ul>
+<li>Windows</li>
+<li>Linux</li>
+<li>macOS</li>
+<li>Android</li>
+</ul>
+
+</div>
+
+
+
+
+<div class="box">
+
+<h2>🛡️ Lesson 5: Asas Keselamatan Komputer</h2>
+
+<ul>
+<li>Gunakan password kuat</li>
+<li>Kemas kini sistem</li>
+<li>Backup data penting</li>
+<li>Jangan pasang aplikasi tidak dipercayai</li>
+</ul>
+
+</div>
+
+
+
+
+<div class="box">
+
+<h2>📝 Quiz Level 1</h2>
+
+<p>
+Apakah fungsi CPU?
+</p>
+
+<button onclick="quiz()">
+JAWAB
+</button>
+
+<p id="result"></p>
+
+</div>
+
+
+
+</div>
+
+
+<script>
+
+function quiz(){
+
+document.getElementById("result").innerHTML=
+"✅ Betul! CPU ialah unit pemproses utama komputer.";
+
+}
+
+</script>
+
+
+
+</body>
+
+</html>
