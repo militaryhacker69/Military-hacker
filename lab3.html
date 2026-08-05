@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>LAB 3 Defense Simulation</title>
+
+<style>
+
+body{
+margin:0;
+background:#000;
+color:white;
+font-family:monospace;
+}
+
+.box{
+
+margin:25px;
+padding:20px;
+background:#111;
+border:1px solid #00ff00;
+border-radius:15px;
+
+}
+
+h1,h2{
+color:#00ff00;
+}
+
+button{
+
+padding:12px;
+background:#00ff00;
+border:0;
+border-radius:8px;
+font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="box">
+
+<h1>🛡️ LAB 3: DEFENSE SIMULATION</h1>
+
+<p>
+Latihan memahami konsep pertahanan sistem dan keselamatan digital.
+</p>
+
+</div>
+
+
+
+<div class="box">
+
+<h2>MISSION 1: PASSWORD SECURITY</h2>
+
+<p>
+Pilih tindakan paling selamat untuk akaun pengguna.
+</p>
+
+<button onclick="mission1()">
+CHECK
+</button>
+
+<p id="r1"></p>
+
+</div>
+
+
+
+
+<div class="box">
+
+<h2>MISSION 2: SYSTEM UPDATE</h2>
+
+<p>
+Kenapa sistem perlu dikemas kini secara berkala?
+</p>
+
+<button onclick="mission2()">
+CHECK
+</button>
+
+<p id="r2"></p>
+
+</div>
+
+
+
+
+<div class="box">
+
+<h2>MISSION 3: DATA PROTECTION</h2>
+
+<p>
+Pilih amalan baik menjaga data.
+</p>
+
+<button onclick="mission3()">
+CHECK
+</button>
+
+<p id="r3"></p>
+
+</div>
+
+
+
+
+<div class="box">
+
+<h2>⭐ DEFENSE SCORE</h2>
+
+<p id="score">
+Score: 0
+</p>
+
+</div>
+
+
+
+<script>
+
+
+let score=0;
+
+
+function update(){
+
+document.getElementById("score").innerHTML=
+"Score: "+score;
+
+}
+
+
+function mission1(){
+
+score+=100;
+
+document.getElementById("r1").innerHTML=
+"✅ Gunakan password kuat dan pengesahan tambahan.";
+
+update();
+
+}
+
+
+
+function mission2(){
+
+score+=100;
+
+document.getElementById("r2").innerHTML=
+"✅ Update membantu membaiki masalah keselamatan.";
+
+update();
+
+}
+
+
+
+function mission3(){
+
+score+=100;
+
+document.getElementById("r3").innerHTML=
+"✅ Backup dan kawalan akses membantu melindungi data.";
+
+update();
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
