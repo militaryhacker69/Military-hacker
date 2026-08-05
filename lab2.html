@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>LAB 2 Networking Simulator</title>
+
+<style>
+
+body{
+margin:0;
+background:#000;
+color:white;
+font-family:monospace;
+}
+
+.box{
+margin:25px;
+padding:20px;
+background:#111;
+border:1px solid #00ff00;
+border-radius:15px;
+}
+
+h1,h2{
+color:#00ff00;
+}
+
+button{
+padding:12px;
+background:#00ff00;
+border:0;
+border-radius:8px;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="box">
+
+<h1>🌐 LAB 2: NETWORKING SIMULATOR</h1>
+
+<p>
+Belajar asas bagaimana komputer berkomunikasi dalam rangkaian.
+</p>
+
+</div>
+
+
+
+<div class="box">
+
+<h2>MISSION 1: IP ADDRESS</h2>
+
+<p>
+Kenali fungsi alamat IP dalam rangkaian.
+</p>
+
+<button onclick="answer1()">
+CHECK ANSWER
+</button>
+
+<p id="result1"></p>
+
+</div>
+
+
+
+
+<div class="box">
+
+<h2>MISSION 2: DNS</h2>
+
+<p>
+Fahami bagaimana nama website dipadankan dengan alamat server.
+</p>
+
+<button onclick="answer2()">
+CHECK ANSWER
+</button>
+
+<p id="result2"></p>
+
+</div>
+
+
+
+
+<div class="box">
+
+<h2>MISSION 3: HTTP & HTTPS</h2>
+
+<p>
+Kenali perbezaan komunikasi web biasa dan komunikasi lebih selamat.
+</p>
+
+<button onclick="answer3()">
+CHECK ANSWER
+</button>
+
+<p id="result3"></p>
+
+</div>
+
+
+
+
+<div class="box">
+
+<h2>⭐ PROGRESS</h2>
+
+<p id="xp">
+XP: 0
+</p>
+
+</div>
+
+
+
+<script>
+
+let xp=0;
+
+
+function answer1(){
+
+xp+=100;
+
+document.getElementById("result1").innerHTML=
+"
